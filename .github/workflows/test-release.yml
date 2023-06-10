@@ -1,4 +1,8 @@
-name: Test/Release
+name: Test/Lint/Release
+
+permissions:
+  contents: write
+
 on:
   pull_request:
   push:
