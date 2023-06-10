@@ -54,7 +54,12 @@ def signed_header_string(headers: dict[str, str]) -> str:
     return ';'.join(headers_list)
 
 
-def canonical_request(method: str, url: str, headers: dict[str, str], body: str) -> str:
+def canonical_request(
+        method: str,
+        url: str,
+        headers: dict[str, str],
+        body: str
+) -> str:
     return f"{method}\n" \
            f"{canonical_uri_string(url)}\n" \
            f"{canonical_query_string(url)}\n" \
