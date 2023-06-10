@@ -3,7 +3,7 @@ from hashlib import sha256
 from datetime import datetime
 from typing import Optional
 
-import signing_functions
+from signway_sdk import signing_functions
 
 
 def sign_url(

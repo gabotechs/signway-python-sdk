@@ -1,1 +1,1 @@
-from . import sign_url
+from signway_sdk.sign_url import sign_url

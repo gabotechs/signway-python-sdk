@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sign_url import sign_url
+from signway_sdk.sign_url import sign_url
 
 
 def test_sign_url():
