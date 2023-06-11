@@ -17,13 +17,6 @@ jobs:
   unit-test-lint:
     if: ${{ !startsWith(github.event.head_commit.message, 'tag') }}
     runs-on: ubuntu-latest
-    services:
-      signway:
-        image: gabotechs/signway
-        options: --entrypoint "signway my-id my-secret"
-        ports:
-          - 3000:3000
-
     steps:
       - uses: actions/checkout@v3
       - run: pipx install poetry
@@ -32,7 +25,9 @@ jobs:
           python-version: '3.11'
           cache: poetry
       - run: poetry install
+      - run: docker run -p 3000:3000 -d --name signway --rm gabotechs/signway my-id my-secret
       - run: poetry run pytest -v signway_sdk
+      - run: docker kill signway
       - run: poetry run flake8
 
   release:
