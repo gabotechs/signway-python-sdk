@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "signway-sdk"
-version = "0.1.2"
+version = "0.1.3"
 description = "Create signed URLs for Signway"
 authors = ["gabotechs <gb.mt.me@gmail.com>"]
 readme = "README.md"
