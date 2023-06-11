@@ -20,7 +20,7 @@ jobs:
     services:
       signway:
         image: gabotechs/signway
-        options: --entrypoint 'signway my-id my-secret'
+        options: --entrypoint "signway my-id my-secret"
         ports:
           - 3000:3000
 
