@@ -19,7 +19,7 @@ pip install signway-sdk
 import os
 from signway_sdk import sign_url
 
-sign_url(
+print(sign_url(
     # The Application ID.
     # It can be either a Signway managed Application ID (ex: ID0123ABCD...),
     # or the ID provided when launching your own Signway instance (`$ signway <ID> <SECRET>`)
@@ -59,5 +59,5 @@ sign_url(
   "stream": true,
   "prompt": "Say this is a test"
 }'''
-)
+))
 ```
